@@ -1,0 +1,46 @@
+<template>
+    <div class="headerTab">
+        <div style="position: absolute;left: 0;top: 5px;">
+            <router-link class="link" to="/home/1" :class="{ active: $route.path == '/home/1' }">南京市</router-link>
+            <router-link class="link" to="/home/2" :class="{ active: $route.path == '/home/2' }">分拣中心</router-link>
+            <router-link class="link" to="/home/3" :class="{ active: $route.path == '/home/3' }">洪蓝街道</router-link>
+        </div>
+        <p>{{ Title || "标题" }}</p>
+        <slot />
+    </div>
+</template>
+
+<script lang="ts" setup>
+defineProps({
+    Title: String
+})
+</script>
+
+<style lang="less" scoped>
+.headerTab {
+    width: 100%;
+    height: 9%;
+    background-image: url("../../../../assets/images/headerBg.png");
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .link {
+        color: #93e4fb;
+        margin: 0 12px;
+    }
+
+    .link.active {
+        color: yellowgreen;
+    }
+
+    p {
+        font-size: 35px;
+        color: #a5ccf2;
+    }
+}
+</style>

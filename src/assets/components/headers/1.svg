@@ -1,0 +1,13 @@
+<svg width="1920" height="44">
+    <polyline fill="transparent" stroke-width="3"
+        points="0,8.8 345.59999999999997,8.8 384,17.6 480,17.6 518.4000000000001,26.4 1382.3999999999999,26.4 1440,17.6 1536,17.6 1574.3999999999999,8.8 1920,8.8"
+        stroke="#00CED1">
+        <animate attributeName="stroke-dasharray" attributeType="XML" from="0, 961.8273191861848, 0, 961.8273191861848"
+            to="0, 0, 1923.6546383723696, 0" dur="7s" begin="0s" calcMode="spline" keyTimes="0;1"
+            keySplines="0.4,1,0.49,0.98" repeatCount="indefinite"></animate>
+    </polyline>
+    <polyline fill="transparent" stroke-width="2" points="576,35.2 1344,35.2" stroke="#BCF25D">
+        <animate attributeName="stroke-dasharray" attributeType="XML" from="0, 384, 0, 384" to="0, 0, 768, 0" dur="7s"
+            begin="0s" calcMode="spline" keyTimes="0;1" keySplines=".4,1,.49,.98" repeatCount="indefinite"></animate>
+    </polyline>
+</svg>

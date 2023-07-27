@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>安徽合肥</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html,
+      body,
+      #he-plugin-standard {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="he-plugin-standard"></div>
+    <script>
+      // 获取he-plugin-standard的真实宽高
+      var width = getComputedStyle(
+        document.getElementById("he-plugin-standard")
+      ).width;
+      var height = getComputedStyle(
+        document.getElementById("he-plugin-standard")
+      ).height;
+      WIDGET = {
+        CONFIG: {
+          layout: "1",
+          width: width.slice(0, -2),
+          height: height.slice(0, -2),
+          background: "1",
+          dataColor: "FFFFFF",
+          borderRadius: "5",
+          city: "CN101220101",
+          key: "4257d59eb2b844cea08da90e308b1690",
+        },
+      };
+    </script>
+    <script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+  </body>
+</html>
