@@ -21,17 +21,17 @@
                         </div>
                     </div>
                     <iframe style="width: 450px;height: 150px;margin-top: 10px;pointer-events: none;user-select: none;"
-                        src="/weather/nanjing.html" frameborder="0"></iframe>
+                        src="./weather/nanjing.html" frameborder="0"></iframe>
                     <iframe style="width: 450px;height: 150px;margin-top: 10px;pointer-events: none;user-select: none;"
-                        src="/weather/xinghua.html" frameborder="0"></iframe>
+                        src="./weather/xinghua.html" frameborder="0"></iframe>
                     <iframe style="width: 450px;height: 150px;margin-top: 10px;pointer-events: none;user-select: none;"
-                        src="/weather/wuhu.html" frameborder="0"></iframe>
+                        src="./weather/wuhu.html" frameborder="0"></iframe>
                     <!-- <iframe style="width: 450px;height: 150px;margin-top: 10px;pointer-events: none;user-select: none;"
-                        src="/weather/hefei.html" frameborder="0"></iframe> -->
+                        src="./weather/hefei.html" frameborder="0"></iframe> -->
                     <!-- <iframe style="width: 450px;height: 150px;margin-top: 10px;pointer-events: none;user-select: none;"
-                        src="/weather/ezhou.html" frameborder="0"></iframe> -->
+                        src="./weather/ezhou.html" frameborder="0"></iframe> -->
                     <iframe style="width: 450px;height: 150px;margin-top: 10px;pointer-events: none;user-select: none;"
-                        src="/weather/qianjiang.html" frameborder="0"></iframe>
+                        src="./weather/qianjiang.html" frameborder="0"></iframe>
                 </div>
             </div>
             <div style="height: 100%;width: 38%;display: flex;justify-content: space-between;flex-direction: column;">
