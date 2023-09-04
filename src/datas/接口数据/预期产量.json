@@ -8,14 +8,6 @@
         "per_acre_production": 149.08
     },
     {
-        "street": "东坝镇",
-        "farmer_number": 2,
-        "production": 7454,
-        "area": 250.0,
-        "every_farmer_production": 3727,
-        "per_acre_production": 29.82
-    },
-    {
         "street": "砖墙镇",
         "farmer_number": 32,
         "production": 119264,
@@ -24,12 +16,28 @@
         "per_acre_production": 23.17
     },
     {
-        "street": "阳江镇",
-        "farmer_number": 3692,
-        "production": 13760084,
-        "area": 60210.6,
+        "street": "淳溪镇",
+        "farmer_number": 7,
+        "production": 26089,
+        "area": 446.6,
         "every_farmer_production": 3727,
-        "per_acre_production": 228.53
+        "per_acre_production": 58.42
+    },
+    {
+        "street": "古柏镇",
+        "farmer_number": 1,
+        "production": 0,
+        "area": 0,
+        "every_farmer_production": 0,
+        "per_acre_production": 0
+    },
+    {
+        "street": "东坝镇",
+        "farmer_number": 2,
+        "production": 7454,
+        "area": 250.0,
+        "every_farmer_production": 3727,
+        "per_acre_production": 29.82
     },
     {
         "street": "固城镇",
@@ -48,19 +56,11 @@
         "per_acre_production": 74.54
     },
     {
-        "street": "淳溪镇",
-        "farmer_number": 7,
-        "production": 26089,
-        "area": 446.6,
+        "street": "阳江镇",
+        "farmer_number": 3692,
+        "production": 13760084,
+        "area": 60210.6,
         "every_farmer_production": 3727,
-        "per_acre_production": 58.42
-    },
-    {
-        "street": "古柏镇",
-        "farmer_number": 1,
-        "production": 0,
-        "area": 0,
-        "every_farmer_production": 0,
-        "per_acre_production": 0
+        "per_acre_production": 228.53
     }
 ]

@@ -172,10 +172,10 @@ data_0 = {
         "datas": [
             {
                 "name": "养殖面积(亩)",
-                "value": "21.2万" or str(round(sum(养殖面积), 2)),
+                "value": "23.7万" or str(round(sum(养殖面积), 2)),
                 "color": "#ffff43",
             },
-            {"name": "养殖户数", "value": "102314" or str(number), "color": "#ffff43"},
+            {"name": "养殖户数", "value": "11385" or str(number), "color": "#ffff43"},
             {"name": "塘口数", "value": str(sum(塘口数)), "color": "#24f2e4"},
         ],
     },
@@ -204,7 +204,7 @@ data_1 = {
     "datas": [
         {"pic": "", "name": "♀️纯母养殖", "values": [str(16180) + "亩"]},
         {"pic": "", "name": "♂️纯公养殖", "values": [str(9700) + "亩"]},
-        {"pic": "", "name": "♂️♀️混合养殖", "values": [str(212000 - 16180 - 9700) + "亩"]},
+        {"pic": "", "name": "♂️♀️混合养殖", "values": [str(236724 - 16180 - 9700) + "亩"]},
     ],
 }
 with open("./接口数据/公母养殖模式.json", "w", encoding=encoding) as outfile:
@@ -244,10 +244,10 @@ with open("./接口数据/塘口类型.json", "w", encoding=encoding) as outfile
 
 # 投苗量（每亩投苗量达xxx的数量）
 data_4 = [
-    {"name": "精养(1500只)", "value": 200},
-    {"name": "良品(2000只)", "value": 230},
-    {"name": "普通(2500只)", "value": 400},
-    {"name": "高产(3000只)", "value": 500},
+    {"name": "精养(1500只)", "value": round(236724*0.16,2)}, # 16%
+    {"name": "良品(2000只)", "value": round(236724*0.17,2)}, # 17%
+    {"name": "普通(2500只)", "value": round(236724*0.3,2)}, # 30%
+    {"name": "高产(3000只)", "value": round(236724*0.37,2)}, # 37%
 ]
 with open("./接口数据/投苗量.json", "w", encoding=encoding) as outfile:
     outfile.write(json.dumps(data_4, ensure_ascii=False, indent=4))
@@ -260,12 +260,13 @@ with open("./接口数据/投苗量.json", "w", encoding=encoding) as outfile:
 data_5 = [
     {
         "name": "规模企业",
-        "value": "20"
+        "value": "23"
         or str(len(list(filter(lambda f: f["pond_area"] >= 500, json_data)))),
     },
     {
         "name": "养殖大户",
-        "value": str(
+        "value":"84"
+        or str(
             len(
                 list(
                     filter(
@@ -278,7 +279,8 @@ data_5 = [
     },
     {
         "name": "中户",
-        "value": str(
+        "value": "546"
+        or str(
             len(
                 list(
                     filter(
@@ -291,7 +293,8 @@ data_5 = [
     },
     {
         "name": "散户",
-        "value": str(len(list(filter(lambda f: f["pond_area"] < 50, json_data)))),
+        "value": "2131"
+        or str(len(list(filter(lambda f: f["pond_area"] < 50, json_data)))),
     },
 ]
 with open("./接口数据/养殖户规模.json", "w", encoding=encoding) as outfile:

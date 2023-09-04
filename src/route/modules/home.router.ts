@@ -16,7 +16,7 @@ const homeRouters: RouteRecordRaw = {
             component: () => import("../../views/main/1.vue"),
             meta: {
                 keepAlive: false,
-                title: "南京市螃蟹大数据"
+                title: "南京高淳螃蟹大数据"
             }
         }, {
             path: "/home/2",

@@ -14,7 +14,7 @@
                                 textAlign: 'center',
                             }">
                                 <a class="link_out" style="color: #fff;"
-                                    href="https://mp.weixin.qq.com/s/Mlw3Gvpf0L3ttHJNp3BWCg" target="_blank"
+                                    href="https://mp.weixin.qq.com/s/fI-h5En0uvzHY8Q9Z6aNXg" target="_blank"
                                     title="前往数据来源">小龙虾产地价格</a>
                             </h1>
                             <scrollable-table :datas="今日小龙虾价格" :show="5" :duration="2000" style="font-size: medium;" />
@@ -146,19 +146,19 @@ const 今日小龙虾价格 = ref({
     data: [
         {
             label: "炮头",
-            value: [36, 37, 38, 37, 37, 38, 38, 38, 38]
+            value: [32, 33, 33, 32, 37, 38, 38, 38, 38]
         }, {
             label: "789",
-            value: [30, 31, 32, 30, 32, 32, 32, 32, 32]
+            value: [24, 26, 26, 26, 32, 32, 32, 32, 32]
         }, {
             label: "大青",
-            value: [24, 25, 27, 26, 27, 28, 27, 27, 27]
+            value: [20, 21, 20, 21, 27, 28, 27, 27, 27]
         }, {
             label: "中青",
-            value: [19, 19, 20, 20, 20, 21, 21, 21, 21]
+            value: [14, 14, 14, 14, 20, 21, 21, 21, 21]
         }, {
             label: "小青",
-            value: [13, 13, 13, 13, 13, 14, 14, 14, 14]
+            value: [10, 10, 10, 10, 13, 14, 14, 14, 14]
         },
     ]
 })

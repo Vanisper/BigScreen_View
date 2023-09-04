@@ -14,12 +14,12 @@
             <g-bubble style="height: 75%;width: 100%;pointer-events: none;" :datas="养殖户规模"></g-bubble>
             <div style="color: #fff;">
                 <div style="display: flex;justify-content: space-around;">
-                    <span>规模企业(500亩以上)</span>
-                    <span>养殖大户(200-500亩)</span>
+                    <span>规模企业(300亩以上)</span>
+                    <span>养殖大户(100-300亩)</span>
                 </div>
                 <div style="display: flex;justify-content: space-around;">
-                    <span>中户(50-200亩)</span>
-                    <span>散户(50亩以下)</span>
+                    <span>中户(30-100亩)</span>
+                    <span>散户(30亩以下)</span>
                 </div>
             </div>
         </div>
