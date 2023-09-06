@@ -1,9 +1,9 @@
 <template>
     <div class="headerTab">
         <div style="position: absolute;left: 0;top: 5px;">
-            <router-link class="link" to="/home/1" :class="{ active: $route.path == '/home/1' }">高淳区</router-link>
+            <router-link class="link" to="/home/1" :class="{ active: $route.path == '/home/1' }">高淳固城湖</router-link>
             <router-link class="link" to="/home/2" :class="{ active: $route.path == '/home/2' }">分拣中心</router-link>
-            <router-link class="link" to="/home/3" :class="{ active: $route.path == '/home/3' }">洪蓝街道</router-link>
+            <router-link class="link" to="/home/3" :class="{ active: $route.path == '/home/3' }">溧水洪蓝街道</router-link>
         </div>
         <p>{{ Title || "标题" }}</p>
         <slot />
