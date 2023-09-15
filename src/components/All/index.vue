@@ -1,5 +1,11 @@
 <template>
-    <div ref="appRef" class="home">
+    <div ref="appRef" class="home" :style="{
+        height: !isAutoResetScale ? '100%' : '',
+        width: !isAutoResetScale ? '100%' : ''
+    }">
+        <!-- <Teleport to="#app > div > div > div.headerTa">
+            <span @click="isAutoResetScale = !isAutoResetScale">自适应比例</span>
+        </Teleport> -->
         <div class="bigScreen">
             <header-tab :Title="$route.meta.title as (string | undefined)">
                 <div @click="toggle"
@@ -14,7 +20,7 @@
                             fill="#FFF" p-id="1598"></path>
                     </svg>
                 </div>
-                <CurrTime style="margin-left: 10px;position: absolute;left: 10px;top:80px;font-weight: 900;z-index: 1;" />
+                <CurrTime style="margin-left: 10px;position: absolute;left: 10px;top: 50px;font-weight: 900;z-index: 1;" />
             </header-tab>
             <router-view>
                 <!-- 缓存处理 -->
@@ -40,7 +46,7 @@ import { IGeoJSON } from "../../types";
 
 // * 适配处理
 const { appRef, calcRate, windowDraw } = useIndex()
-
+const isAutoResetScale = ref(true);
 const fullscreenToggle = ref<() => Promise<void>>()
 onMounted(() => {
     fullscreenToggle.value = useFullscreen(appRef.value?.parentElement).toggle;
@@ -50,9 +56,11 @@ const toggle = async (_event: MouseEvent) => {
 }
 // 生命周期
 onMounted(() => {
-    // todo 屏幕适应
-    windowDraw()
-    calcRate()
+    if (isAutoResetScale.value) {
+        // todo 屏幕适应
+        windowDraw()
+        calcRate() 
+    }
 })
 
 </script>

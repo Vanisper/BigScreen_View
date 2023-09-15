@@ -27,8 +27,8 @@ const headerData = ref(头部数据)
 // 生命周期
 onMounted(() => {
     // todo 屏幕适应
-    windowDraw()
-    calcRate()
+    // windowDraw()
+    // calcRate()
     axios.get(getRealUrl("头部数据")!).then((res) => {
         headerData.value = res.data.data.data
     })
