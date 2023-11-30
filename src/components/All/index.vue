@@ -20,7 +20,8 @@
                             fill="#FFF" p-id="1598"></path>
                     </svg>
                 </div>
-                <CurrTime style="margin-left: 10px;position: absolute;left: 10px;top: 50px;font-weight: 900;z-index: 1;" />
+                <!-- <CurrTime style="margin-left: 10px;position: absolute;left: 10px;top: 50px;font-weight: 900;z-index: 1;" /> -->
+                <CurrTime style="font-size: 25px;" />
             </header-tab>
             <router-view>
                 <!-- 缓存处理 -->

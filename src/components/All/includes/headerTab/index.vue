@@ -5,7 +5,7 @@
             <router-link class="link" to="/home/2" :class="{ active: $route.path == '/home/2' }">分拣中心</router-link>
             <router-link class="link" to="/home/3" :class="{ active: $route.path == '/home/3' }">溧水洪蓝街道</router-link>
         </div>
-        <p>{{ Title || "标题" }}</p>
+        <!-- <p>{{ Title || "标题" }}</p> -->
         <slot />
     </div>
 </template>
