@@ -1,6 +1,6 @@
 <template>
     <div class="headerTab">
-        <div style="position: absolute;left: 0;top: 5px;">
+        <div style="position: absolute;left: 10px;top: 25px;font-size: x-large;">
             <router-link class="link" to="/home/1" :class="{ active: $route.path == '/home/1' }">高淳固城湖</router-link>
             <router-link class="link" to="/home/2" :class="{ active: $route.path == '/home/2' }">分拣中心</router-link>
             <router-link class="link" to="/home/3" :class="{ active: $route.path == '/home/3' }">溧水洪蓝街道</router-link>
@@ -20,7 +20,7 @@ defineProps({
 .headerTab {
     width: 100%;
     height: 9%;
-    background-image: url("../../../../assets/images/headerBg.png");
+    // background-image: url("../../../../assets/images/headerBg.png");
     background-size: cover;
     background-position: center center;
     text-align: center;
@@ -32,10 +32,14 @@ defineProps({
     .link {
         color: #93e4fb;
         margin: 0 12px;
+        border: 1px solid #93e4fb;
+        padding: 5px 10px;
+        border-radius: 10px;
     }
 
     .link.active {
         color: yellowgreen;
+        border-color: yellowgreen;
     }
 
     p {

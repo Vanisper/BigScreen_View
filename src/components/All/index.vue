@@ -9,7 +9,7 @@
         <div class="bigScreen">
             <header-tab :Title="$route.meta.title as (string | undefined)">
                 <div @click="toggle"
-                    style="display: flex;justify-content: center ;align-items: center;overflow: hidden;position: absolute;right: 35%;transform: translateX(50%);cursor: pointer;">
+                    style="display: flex;justify-content: center ;align-items: center;overflow: hidden;position: absolute;right: 10px;top: 25px;cursor: pointer;">
                     <svg t="1687580220747" class="icon" viewBox="0 0 1024 1024" version="1.1"
                         xmlns="http://www.w3.org/2000/svg" p-id="1596" width="32" height="32">
                         <path
@@ -20,8 +20,7 @@
                             fill="#FFF" p-id="1598"></path>
                     </svg>
                 </div>
-                <!-- <CurrTime style="margin-left: 10px;position: absolute;left: 10px;top: 50px;font-weight: 900;z-index: 1;" /> -->
-                <CurrTime style="font-size: 25px;" />
+                <CurrTime style="margin-left: 10px;position: absolute;right: 60px;top: 25px;font-weight: 900;z-index: 1;" />
             </header-tab>
             <router-view>
                 <!-- 缓存处理 -->
