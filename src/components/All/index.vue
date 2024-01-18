@@ -21,7 +21,7 @@
                     </svg>
                 </div>
                 <CurrTime style="margin-left: 10px;position: absolute;right: 60px;top: 25px;font-weight: 900;z-index: 1;">
-                    <n-dropdown :options="options" placement="bottom-start" trigger="hover" @select="handleSelect">
+                    <n-dropdown v-if="!isIFrame" :options="options" placement="bottom-start" trigger="hover" @select="handleSelect">
                         <n-button class="select" text-color="#fff">{{ select.label }}</n-button>
                     </n-dropdown>
                 </CurrTime>
@@ -50,20 +50,6 @@ import useIndex, { ScaleModeType } from "./utils/useDraw";
 import { IGeoJSON } from "../../types";
 
 // * 适配处理
-const { appRef, calcRate, windowDraw, setScaleMode } = useIndex()
-// ** 屏幕适配缩放模式
-interface ISelect {
-    label: string;
-    key: ScaleModeType
-}
-const select = ref<ISelect>({
-    label: "拉伸模式",
-    key: "0"
-})
-const handleSelect = (key: ScaleModeType) => {
-    setScaleMode(key);
-    select.value = options.find(v=>v.key==key) as ISelect
-}
 const options = [
     {
         label: "拉伸模式",
@@ -74,6 +60,18 @@ const options = [
         key: "1"
     }
 ];
+const select = ref<ISelect>(localStorage.getItem("AppScaleMode") ? (options.find((v) => v.key == localStorage.getItem("AppScaleMode")) || options[0]) as ISelect : options[0] as ISelect);
+const { appRef, calcRate, windowDraw, setScaleMode, style, isIFrame } = useIndex(select.value.key);
+// ** 屏幕适配缩放模式
+interface ISelect {
+    label: string;
+    key: ScaleModeType
+}
+const handleSelect = (key: ScaleModeType) => {
+    setScaleMode(key);
+    select.value = options.find(v=>v.key==key) as ISelect;
+    localStorage.setItem("AppScaleMode", key);
+}
 
 const isAutoResetScale = ref(true);
 const fullscreenToggle = ref<() => Promise<void>>()
@@ -82,7 +80,7 @@ onMounted(() => {
     if (isAutoResetScale.value) {
         // todo 屏幕适应
         windowDraw()
-        calcRate() 
+        calcRate()
     }
 })
 const toggle = async (_event: MouseEvent) => {
@@ -93,8 +91,8 @@ const toggle = async (_event: MouseEvent) => {
 
 <style lang="less" scoped>
 .home {
-    width: 1920px;
-    height: 1080px;
+    width: v-bind("!isAutoResetScale ? '1920px' : `${style.baseWidth.value}px`");
+    height: v-bind("!isAutoResetScale ? '1080px' : `${style.baseHeight.value}px`");
     position: absolute;
     top: 50%;
     left: 50%;
@@ -109,7 +107,6 @@ const toggle = async (_event: MouseEvent) => {
         background-position: center center;
         display: flex;
         flex-direction: column;
-        // justify-content: space-between;
     }
 }
 </style>
