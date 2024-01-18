@@ -20,7 +20,11 @@
                             fill="#FFF" p-id="1598"></path>
                     </svg>
                 </div>
-                <CurrTime style="margin-left: 10px;position: absolute;right: 60px;top: 25px;font-weight: 900;z-index: 1;" />
+                <CurrTime style="margin-left: 10px;position: absolute;right: 60px;top: 25px;font-weight: 900;z-index: 1;">
+                    <n-dropdown :options="options" placement="bottom-start" trigger="hover" @select="handleSelect">
+                        <n-button class="select" text-color="#fff">{{ select.label + '价格' }}</n-button>
+                    </n-dropdown>
+                </CurrTime>
             </header-tab>
             <router-view>
                 <!-- 缓存处理 -->
@@ -37,31 +41,52 @@
 
 <script lang="ts" setup>
 import { onMounted, watch, ref, onUnmounted } from "vue";
+import { useMessage, NDropdown, NButton } from 'naive-ui';
 import { useFullscreen } from '@vueuse/core';
 import { HeaderTab } from "./includes/headerTab";
 import CurrTime from "../temp/CurrTime.vue";
-import useIndex from "./utils/useDraw";
+import useIndex, { ScaleModeType } from "./utils/useDraw";
 
 import { IGeoJSON } from "../../types";
 
 // * 适配处理
-const { appRef, calcRate, windowDraw } = useIndex()
+const { appRef, calcRate, windowDraw, setScaleMode } = useIndex()
+// ** 屏幕适配缩放模式
+interface ISelect {
+    label: string;
+    key: ScaleModeType
+}
+const select = ref<ISelect>({
+    label: "拉伸模式",
+    key: "0"
+})
+const handleSelect = (key: ScaleModeType) => {
+    setScaleMode(key);
+}
+const options = [
+    {
+        label: "拉伸模式",
+        key: "0"
+    },
+    {
+        label: "等比模式",
+        key: "1"
+    }
+];
+
 const isAutoResetScale = ref(true);
 const fullscreenToggle = ref<() => Promise<void>>()
 onMounted(() => {
     fullscreenToggle.value = useFullscreen(appRef.value?.parentElement).toggle;
-})
-const toggle = async (_event: MouseEvent) => {
-    await fullscreenToggle.value!()
-}
-// 生命周期
-onMounted(() => {
     if (isAutoResetScale.value) {
         // todo 屏幕适应
         windowDraw()
         calcRate() 
     }
 })
+const toggle = async (_event: MouseEvent) => {
+    await fullscreenToggle.value!()
+}
 
 </script>
 

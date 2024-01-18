@@ -1,7 +1,8 @@
 <template>
     <div style="color: #fff;font-size: 20px;display: flex;align-items: center;">
         <span>{{ currentDate }}</span>
-        <span style="margin-left: 10px;" ref="dom"></span>
+        <span style="margin-left: 10px;margin-right: 10px;" ref="dom"></span>
+        <slot />
     </div>
 </template>
 

@@ -8,8 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, watch, ref } from "vue";
-import useIndex from "../../components/All/utils/useDraw";
+import { onMounted, ref } from "vue";
 
 import recordNumberTab from "../../components/All/includes/contentCenter/recordNumberTab";
 import 头部数据 from "../../datas/接口数据/头部数据.json";
@@ -18,9 +17,6 @@ import ContentRight from "../../components/All/includes/contentRight/index.vue";
 import ContentLeft from "../../components/All/includes/contentLeft/index.vue";
 import axios from "../../api/request"
 import { getRealUrl } from "../../api/config";
-
-// * 适配处理
-const { appRef, calcRate, windowDraw } = useIndex()
 
 const headerData = ref(头部数据)
 // 生命周期
