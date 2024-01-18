@@ -25,7 +25,7 @@ import {
 import { UniversalTransition } from 'echarts/features';
 import { CanvasRenderer } from 'echarts/renderers';
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
-import { YAXisOption } from 'echarts/types/dist/shared';
+import { YAXisComponentOption } from 'echarts';
 import { titleFontSize } from '../../assets/style';
 import { colorToRGBA, convertColorsToHash, generateColors, rgbaColorToHash } from '../../utils/Color';
 
@@ -129,7 +129,7 @@ const option: EChartsOption = {
         }
     ],
     yAxis: [
-        ...(props.datas.bar ?? []).map((data, index): YAXisOption => {
+        ...(props.datas.bar ?? []).map((data, index): YAXisComponentOption => {
             return {
                 type: 'value',
                 name: data.label,
@@ -144,7 +144,7 @@ const option: EChartsOption = {
                 },
             }
         }),
-        ...(props.datas.line ?? []).map((data, index): YAXisOption => {
+        ...(props.datas.line ?? []).map((data, index): YAXisComponentOption => {
             return {
                 type: 'value',
                 name: data.label,
@@ -211,7 +211,7 @@ watch(() => props.datas, (newVal) => {
             }
         ],
         yAxis: [
-            ...(newVal.bar ?? []).map((data, index): YAXisOption => {
+            ...(newVal.bar ?? []).map((data, index): YAXisComponentOption => {
                 return {
                     type: 'value',
                     name: data.label,
@@ -226,7 +226,7 @@ watch(() => props.datas, (newVal) => {
                     },
                 }
             }),
-            ...(newVal.line ?? []).map((data, index): YAXisOption => {
+            ...(newVal.line ?? []).map((data, index): YAXisComponentOption => {
                 return {
                     type: 'value',
                     name: data.label,
