@@ -62,6 +62,7 @@ const select = ref<ISelect>({
 })
 const handleSelect = (key: ScaleModeType) => {
     setScaleMode(key);
+    select.value = options.find(v=>v.key==key) as ISelect
 }
 const options = [
     {
