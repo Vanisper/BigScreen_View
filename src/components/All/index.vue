@@ -22,7 +22,7 @@
                 </div>
                 <CurrTime style="margin-left: 10px;position: absolute;right: 60px;top: 25px;font-weight: 900;z-index: 1;">
                     <n-dropdown :options="options" placement="bottom-start" trigger="hover" @select="handleSelect">
-                        <n-button class="select" text-color="#fff">{{ select.label + '价格' }}</n-button>
+                        <n-button class="select" text-color="#fff">{{ select.label }}</n-button>
                     </n-dropdown>
                 </CurrTime>
             </header-tab>
