@@ -1,10 +1,9 @@
 <template>
     <recordNumberTab style="margin: 10px 0;" :datas="headerData" />
     <div class="content">
-        <ContentLeft class="contentLeft"></ContentLeft>
-        <ContentCenter class="contentCenter">
-        </ContentCenter>
-        <ContentRight class="contentRight"></ContentRight>
+        <ContentLeft class="contentLeft" />
+        <ContentCenter class="contentCenter" />
+        <ContentRight class="contentRight" />
     </div>
 </template>
 
