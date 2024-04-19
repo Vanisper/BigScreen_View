@@ -1,0 +1,38 @@
+[
+    {
+        "name": "序号",
+        "sub": null
+    },
+    {
+        "name": "生产经营主体名称",
+        "sub": null
+    },
+    {
+        "name": "身份证号",
+        "sub": null
+    },
+    {
+        "name": "地址",
+        "sub": null
+    },
+    {
+        "name": "养殖面积",
+        "sub": null
+    },
+    {
+        "name": "养殖类型",
+        "sub": null
+    },
+    {
+        "name": "养殖品种",
+        "sub": null
+    },
+    {
+        "name": "手机号码",
+        "sub": null
+    },
+    {
+        "name": "备注",
+        "sub": null
+    }
+]

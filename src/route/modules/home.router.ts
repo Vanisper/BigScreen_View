@@ -34,6 +34,14 @@ const homeRouters: RouteRecordRaw = {
                 keepAlive: false,
                 title: "洪蓝街道水产养殖信息"
             }
+        }, {
+            path: "/home/4",
+            name: "Home4",
+            component: () => import("../../views/main/4.vue"),
+            meta: {
+                keepAlive: false,
+                title: "扬州宝应夏集镇水产养殖信息"
+            }
         },
     ],
 }

@@ -26,3 +26,9 @@ dist-ssr
 # 适配wails项目
 wailsjs
 package.json.md5
+
+
+*.doc
+*.docx
+*.xls
+*.xlsx

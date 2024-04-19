@@ -51,10 +51,13 @@ export const rules = [
     }, {
         label: "洪蓝街道数据",
         url: `${VITE_API_BASE}/HongLanStreetData`
+    }, {
+        label: "扬州宝应县数据",
+        url: `${VITE_API_BASE}/YZBaoYinStreetData`
     },
 ]
 
-// 根据以上规则列表，指定lablel，获取对应的url  给mock插件使用
+// 根据以上规则列表，指定label，获取对应的url  给mock插件使用
 export const getRuleUrl = (label: string) => {
     const rule = rules.find(item => item.label === label)
     return rule?.url

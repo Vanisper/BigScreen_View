@@ -15,6 +15,7 @@ import 养殖大户Top5 from "../../datas/接口数据/养殖大户Top5.json";
 import 各规格发货量 from "../../datas/接口数据/各规格发货量.json";
 
 import 洪蓝街道数据 from "../../datas/洪蓝街道数据/data.json";
+import 扬州宝应夏集镇数据 from "../../datas/扬州宝应夏集镇/2024/data.json";
 
 interface MyMockMethod extends MockMethod {
     data: any
@@ -190,5 +191,18 @@ export default [
             };
         },
         data: 洪蓝街道数据
+    }, {
+        url: getRuleUrl("扬州宝应县数据"),
+        method: "get",
+        response: () => {
+            return {
+                code: 200,
+                data: {
+                    data: 扬州宝应夏集镇数据
+                },
+                message: "success"
+            };
+        },
+        data: 扬州宝应夏集镇数据
     }
 ] as MyMockMethod[];

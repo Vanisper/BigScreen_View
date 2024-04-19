@@ -99,7 +99,7 @@ const option: EChartsOption = {
         axisLabel: {
             margin: 10,
             fontSize: xAxisLabelFontSize,
-            interval: 0, rotate: 30,
+            interval: 0, rotate: 45,
         }
     },
     yAxis: {
