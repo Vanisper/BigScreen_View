@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts" setup>
-import axios from 'axios';
+import axios from "../../api/request";
 import { onMounted, ref } from 'vue';
 import { getRealUrl } from '../../api/config';
 import recordNumberTab from "../../components/All/includes/contentCenter/recordNumberTab";
